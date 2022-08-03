@@ -17,8 +17,8 @@
       <ul class="nav navbar-nav navbar-right">
        
         <% if user_signed_in? %>
-          <li><a href="/home/index">HOME</a></li>
-           <li><a href="/words/index">WORDS</a></li>
+          <li><a href="/">HOME</a></li>
+           <li><a href="/words">WORDS</a></li>
           <li><a href="/users/edit">EDIT PROFILE</a></li>
           <li><%= button_to "LOG OUT",destroy_user_session_path, method: :delete%></li>
         <% else%>

@@ -1,8 +1,10 @@
 Rails.application.routes.draw do
+  root 'home#index'
   resources :words
   
+  
   devise_for :users
-  root 'home#index'
+  
   get "users", to: "devise/session#new"
   
 end
