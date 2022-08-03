@@ -1,0 +1,22 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Words</h1>
+
+<div id="words">
+  <% @words.each do |word| %>
+    <%= render word %>
+    <% if current_user && current_user.admin %>
+          <%= link_to "WORDS", words_path %>
+          <%= link_to "New word", new_word_path %>
+          <p>
+            <%= link_to "Show this word", word %>
+          </p>
+        <% else%>
+          <p>
+            <%= link_to "Show this word", word %>
+          </p>
+        <% end%>
+   
+  <% end %>
+</div>
+
